@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "GymManager",
+    "slug": "GymManager",
+    "version": "1.0.0",
+    "sdkVersion": "52.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.ahmed9yaha.gymmanager",
+      "supportsRTL": false,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png"
+      },
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      "./plugins/with-generated-table-alarm",
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "gym-alerts",
+          "sounds": ["./assets/sounds/table_alarm.wav"]
+        }
+      ]
+    ],
+    "extra": {
+      "supportsRTL": false,
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8fbdbb7e-9456-4173-828c-8d982d18b6bb"
+      }
+    }
+  }
+}
